@@ -329,9 +329,19 @@
   font-size: var(--text-lg);
   font-weight: var(--font-weight-medium);
   letter-spacing: var(--tracking-normal);
-  margin-bottom: 0.25em;
+  margin-bottom: 0.5em;
   text-transform: none;
   color: var(--color-fg-bold);
+}
+
+.degree-container .thesis {
+  font-size: var(--text-sm);
+  line-height: 1.6;
+  letter-spacing: var(--tracking-normal);
+  color: var(--color-fg);
+  margin-bottom: 0.5em;
+  font-style: italic;
+  max-width: 640px;
 }
 
 .degree-container .school {

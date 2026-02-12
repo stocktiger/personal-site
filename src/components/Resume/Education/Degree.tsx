@@ -9,6 +9,7 @@ export default function Degree({ data }: DegreeProps) {
     <article className="degree-container">
       <header>
         <h4 className="degree">{data.degree}</h4>
+        {data.thesis && <p className="thesis">{data.thesis}</p>}
         <p className="school">
           <a href={data.link}>{data.school}</a>,{' '}
           <time dateTime={String(data.year)}>{data.year}</time>

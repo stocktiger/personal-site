@@ -8,6 +8,7 @@ const mockDegrees = [
   {
     school: 'Stanford University',
     degree: 'M.S. Computer Science',
+    thesis: 'Machine Learning Applications in Natural Language Processing',
     link: 'https://stanford.edu',
     year: 2020,
   },
@@ -57,6 +58,7 @@ describe('Degree', () => {
   const mockDegree = {
     school: 'Stanford University',
     degree: 'M.S. Computer Science',
+    thesis: 'Machine Learning Applications in Natural Language Processing',
     link: 'https://stanford.edu',
     year: 2020,
   };
@@ -87,5 +89,29 @@ describe('Degree', () => {
 
     const article = document.querySelector('article.degree-container');
     expect(article).toBeInTheDocument();
+  });
+
+  it('renders thesis when provided', () => {
+    render(<Degree data={mockDegree} />);
+
+    expect(
+      screen.getByText(
+        'Machine Learning Applications in Natural Language Processing',
+      ),
+    ).toBeInTheDocument();
+  });
+
+  it('does not render thesis when not provided', () => {
+    const degreeWithoutThesis = {
+      school: 'MIT',
+      degree: 'B.S. Computer Science',
+      link: 'https://mit.edu',
+      year: 2016,
+    };
+
+    render(<Degree data={degreeWithoutThesis} />);
+
+    const thesis = document.querySelector('.thesis');
+    expect(thesis).not.toBeInTheDocument();
   });
 });
