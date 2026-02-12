@@ -14,7 +14,7 @@ describe('Footer', () => {
   it('displays the name and role', () => {
     render(<Footer />);
 
-    expect(screen.getByText("Michael Suarez")).toBeInTheDocument();
+    expect(screen.getByText('Michael Suarez')).toBeInTheDocument();
     expect(screen.getByText('Quant & Educator')).toBeInTheDocument();
   });
 

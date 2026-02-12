@@ -1,6 +1,6 @@
 import { describe, expect, it } from 'vitest';
 
-import { aboutMarkdown } from '../about';
+import { aboutMarkdown, timelineData } from '../about';
 
 describe('about data', () => {
   it('exports aboutMarkdown as a string', () => {
@@ -10,27 +10,12 @@ describe('about data', () => {
 
   it('contains the intro section', () => {
     expect(aboutMarkdown).toContain('# Intro');
-    expect(aboutMarkdown).toContain('Promptfoo');
-  });
-
-  it('contains the history section', () => {
-    expect(aboutMarkdown).toContain('# Some History');
-    expect(aboutMarkdown).toContain('MS-DOS');
+    expect(aboutMarkdown).toContain('AI research');
   });
 
   it('contains the likes section', () => {
     expect(aboutMarkdown).toContain('# I Like');
-    expect(aboutMarkdown).toContain('Running');
-    expect(aboutMarkdown).toContain('Skiing');
-  });
-
-  it('contains the travel section', () => {
-    expect(aboutMarkdown).toContain('# Travel / Geography');
-    expect(aboutMarkdown).toContain('Buffalo, New York');
-  });
-
-  it('contains the fun facts section', () => {
-    expect(aboutMarkdown).toContain('# Fun Facts');
+    expect(aboutMarkdown).toContain('Traditional Cooking');
   });
 
   it('contains the dreams section', () => {
@@ -38,17 +23,27 @@ describe('about data', () => {
     expect(aboutMarkdown).toContain('Staying curious');
   });
 
-  it('contains the admired websites section', () => {
-    expect(aboutMarkdown).toContain('# Websites from People I Admire');
+  it('contains the questions section', () => {
+    expect(aboutMarkdown).toContain('# Questions that make me think');
   });
 
-  it('contains valid markdown links', () => {
-    // Check for markdown link format [text](url)
-    const linkRegex = /\[.+?\]\(.+?\)/g;
-    const links = aboutMarkdown.match(linkRegex);
+  it('does not contain timeline in markdown', () => {
+    expect(aboutMarkdown).not.toContain('# Timeline');
+    expect(aboutMarkdown).not.toContain('Vienna in 1996');
+  });
 
-    expect(links).not.toBeNull();
-    expect(links!.length).toBeGreaterThan(10);
+  it('exports timeline data array', () => {
+    expect(Array.isArray(timelineData)).toBe(true);
+    expect(timelineData.length).toBeGreaterThan(0);
+  });
+
+  it('timeline data has proper structure', () => {
+    timelineData.forEach((event) => {
+      expect(event).toHaveProperty('year');
+      expect(event).toHaveProperty('description');
+      expect(typeof event.year).toBe('number');
+      expect(typeof event.description).toBe('string');
+    });
   });
 
   it('contains properly formatted headers', () => {
@@ -57,6 +52,6 @@ describe('about data', () => {
     const headers = aboutMarkdown.match(headerRegex);
 
     expect(headers).not.toBeNull();
-    expect(headers!.length).toBeGreaterThan(5);
+    expect(headers!.length).toBeGreaterThan(2);
   });
 });

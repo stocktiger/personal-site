@@ -15,7 +15,7 @@ describe('Hero', () => {
     render(<Hero />);
 
     const heading = screen.getByRole('heading', { level: 1 });
-    expect(heading).toHaveTextContent("Michael Suarez");
+    expect(heading).toHaveTextContent('Michael Suarez');
   });
 
   it('renders the tagline with Promptfoo link', () => {

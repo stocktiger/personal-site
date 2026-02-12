@@ -26,8 +26,12 @@ export default function Hero() {
 
         <div className="hero-chips">
           <span className="hero-chip">Prop Trading Firm Quant</span>
-          <span className="hero-chip">PhD in Applied Machine Learning for Drug Discovery</span>
-          <span className="hero-chip">Adjunct Professor at Skema Business School</span>
+          <span className="hero-chip">
+            PhD in Applied Machine Learning for Drug Discovery
+          </span>
+          <span className="hero-chip">
+            Adjunct Professor at Skema Business School
+          </span>
           <span className="hero-chip">Co-founded Datanimo</span>
         </div>
 

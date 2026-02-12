@@ -1,13 +1,14 @@
 import Markdown from 'markdown-to-jsx';
 import type { Metadata } from 'next';
 
+import Timeline from '@/components/About/Timeline';
 import PageWrapper from '@/components/Template/PageWrapper';
-import { aboutMarkdown } from '@/data/about';
+import { aboutMarkdown, timelineData } from '@/data/about';
 
 export const metadata: Metadata = {
   title: 'About',
   description:
-    "Learn about Michael Suarez - Applied Machine Learning PhD, Prop Trading Quant and Adjunct Professor in the fields of finance and digital transformation.",
+    'Learn about Michael Suarez - Applied Machine Learning PhD, Prop Trading Quant and Adjunct Professor in the fields of finance and digital transformation.',
 };
 
 const countWords = (str: string) =>
@@ -25,6 +26,8 @@ export default function AboutPage() {
         </header>
         <article className="about-content">
           <Markdown>{aboutMarkdown}</Markdown>
+          <h1>Timeline</h1>
+          <Timeline events={timelineData} />
         </article>
       </section>
     </PageWrapper>
