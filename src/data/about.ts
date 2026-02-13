@@ -21,15 +21,13 @@ export const timelineData: TimelineEvent[] = [
 
 export const aboutMarkdown = `# Intro
 
-I'm passionate about providing services that bridge the gap of cutting edge AI research and real-world applications in Europe.
+I’m passionate about building services that bridge cutting-edge AI research and real-world applications across Europe.
 
-I spent the past five years building and growing as a quant with a proprietary trading firm in Hong Kong from 5 to over 100 people with
+I spent the last five years as a quant at a proprietary trading firm in Hong Kong, helping grow the company from 5 to 100+ people in a fast-moving environment. My product style is simple: act quickly, learn from reality, iterate aggressively, and compound progress.
 
-I have adopted the act first, break things and grow fast approach to product development.
+Before trading, I worked on deep-learning for drug discovery during my PhD, which gave me a strong grounding in machine learning, data science, and applied AI.
 
-I used to develop deep-learning models for drug discovery in 2018 to build a strong foundation in machine learning, data science and AI.
-
-In my spare time, I enjoy nature walks, reading, and exploring new technologies. I would consider myself somewhat of a foodie.
+When I’m not working, I’m usually walking in nature, reading, exploring new tech, or trying a new restaurant.
 
 # I Like
 
