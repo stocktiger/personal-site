@@ -24,6 +24,15 @@ export default function SkillTag({ data, categories }: SkillTagProps) {
         ? 'skill-tag--md'
         : 'skill-tag--sm';
 
+  // Generate dots for competency visualization
+  const dots = Array.from({ length: MAX_COMPETENCY }, (_, i) => (
+    <span
+      key={i}
+      className={`competency-dot ${i < competency ? 'competency-dot--filled' : ''}`}
+      aria-hidden="true"
+    />
+  ));
+
   return (
     <span
       className={`skill-tag ${sizeClass}`}
@@ -36,6 +45,7 @@ export default function SkillTag({ data, categories }: SkillTagProps) {
       aria-label={`${title}: proficiency ${competency} out of ${MAX_COMPETENCY}`}
     >
       <span className="skill-tag-name">{title}</span>
+      <span className="competency-dots">{dots}</span>
     </span>
   );
 }

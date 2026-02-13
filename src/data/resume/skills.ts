@@ -1,3 +1,5 @@
+import { title } from "node:process";
+
 export interface Skill {
   title: string;
   competency: number;
@@ -19,14 +21,29 @@ const skills: Skill[] = [
     category: ['Languages', 'ML Engineering'],
   },
   {
-    title: 'TypeScript',
+    title: 'English',
     competency: 5,
-    category: ['Languages', 'Web Development'],
+    category: ['Languages'],
   },
   {
-    title: 'SQL',
+    title: 'Deutsch',
+    competency: 5,
+    category: ['Languages'],
+  },
+  {
+    title: 'Español',
     competency: 4,
-    category: ['Languages', 'Databases'],
+    category: ['Languages'],
+  },
+  {
+    title: 'Nederlands',
+    competency: 2,
+    category: ['Languages'],
+  },
+  {
+    title: '中文',
+    competency: 1,
+    category: ['Languages'],
   },
   // AI & LLM
   {
@@ -36,11 +53,6 @@ const skills: Skill[] = [
   },
   {
     title: 'LLM Evaluation',
-    competency: 5,
-    category: ['ML Engineering'],
-  },
-  {
-    title: 'AI Red-teaming',
     competency: 5,
     category: ['ML Engineering'],
   },
@@ -70,6 +82,11 @@ const skills: Skill[] = [
     category: ['ML Engineering'],
   },
   {
+    title: 'Tensorflow',
+    competency: 4,
+    category: ['ML Engineering'],
+  },
+  {
     title: 'Pandas',
     competency: 5,
     category: ['ML Engineering', 'Data Engineering'],
@@ -83,11 +100,6 @@ const skills: Skill[] = [
   {
     title: 'FastAPI',
     competency: 4,
-    category: ['Web Development'],
-  },
-  {
-    title: 'Next.js',
-    competency: 3,
     category: ['Web Development'],
   },
   // Databases
@@ -117,10 +129,36 @@ const skills: Skill[] = [
     competency: 3,
     category: ['Infrastructure'],
   },
+  // Education
   {
-    title: 'Observability',
-    competency: 4,
-    category: ['Infrastructure', 'ML Engineering'],
+    title: 'Digital Transformation in Finance',
+    competency: 5,
+    category: ['Education'],
+  },
+  {
+    title: 'Delta 1 Arbitrage Fundamentals',
+    competency: 5,
+    category: ['Education'],
+  },
+  {
+    title: 'Electronic Option Market Making',
+    competency: 5,
+    category: ['Education'],
+  },
+  {
+    title: 'AI Agents, Prompts, and RAG',
+    competency: 5,
+    category: ['Education'],
+  },
+  {
+    title: 'Deep Learning in Finance Basics',
+    competency: 5,
+    category: ['Education'],
+  },
+  {
+    title: 'AI driven Drug Discovery',
+    competency: 5,
+    category: ['Education'],
   },
 ].map((skill) => ({ ...skill, category: skill.category.sort() }));
 
@@ -130,13 +168,13 @@ const skills: Skill[] = [
  * with textColor pre-computed from the hex values for accessibility.
  *
  * Hex values from tailwind.css @theme block:
- * --color-skill-1: #6968b3, --color-skill-2: #37b1f5, --color-skill-3: #40494e
+ * --color-skill-1: #6968b3, --color-skill-2: #37b1f5, --color-skill-3: #10b981
  * --color-skill-4: #515dd4, --color-skill-5: #e47272, --color-skill-6: #cc7b94
  */
 const CATEGORY_COLORS: { color: string; textColor: 'dark' | 'light' }[] = [
   { color: 'var(--color-skill-1)', textColor: 'light' }, // #6968b3 - dark bg
   { color: 'var(--color-skill-2)', textColor: 'dark' }, // #37b1f5 - light bg
-  { color: 'var(--color-skill-3)', textColor: 'light' }, // #40494e - dark bg
+  { color: 'var(--color-skill-3)', textColor: 'light' }, // #10b981 - emerald green
   { color: 'var(--color-skill-4)', textColor: 'light' }, // #515dd4 - dark bg
   { color: 'var(--color-skill-5)', textColor: 'dark' }, // #e47272 - light bg
   { color: 'var(--color-skill-6)', textColor: 'dark' }, // #cc7b94 - light bg

@@ -57,7 +57,7 @@
 .skill-tag {
   display: inline-flex;
   align-items: center;
-  gap: 0.5em;
+  gap: 0.75em;
   padding: 0.6em 1.1em;
   background: var(--color-bg);
   border: 1px solid var(--color-border);
@@ -84,6 +84,31 @@
   white-space: nowrap;
 }
 
+/* Competency dots visualization */
+.competency-dots {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.25em;
+}
+
+.competency-dot {
+  width: 0.4em;
+  height: 0.4em;
+  border-radius: 50%;
+  background: var(--color-border);
+  transition:
+    background-color var(--duration-fast) var(--ease-out),
+    transform var(--duration-fast) var(--ease-out);
+}
+
+.competency-dot--filled {
+  background: var(--tag-color, var(--color-accent));
+}
+
+.skill-tag:hover .competency-dot--filled {
+  transform: scale(1.2);
+}
+
 /* Tech tags - pill style for project cards */
 .tech-tag {
   font-size: var(--text-xs);
@@ -105,20 +130,35 @@
 
 /* Size variations - more subtle differences */
 .skill-tag--lg {
-  padding: 0.5em 1em;
-  font-size: var(--text-sm);
-  font-weight: var(--font-weight-bold);
+  padding: 0.65em 1.1em;
+  font-size: var(--text-base);
+  font-weight: var(--font-weight-semibold);
+}
+
+.skill-tag--lg .competency-dot {
+  width: 0.5em;
+  height: 0.5em;
 }
 
 .skill-tag--md {
-  padding: 0.45em 0.9em;
+  padding: 0.55em 1em;
   font-size: var(--text-sm);
   font-weight: var(--font-weight-medium);
 }
 
+.skill-tag--md .competency-dot {
+  width: 0.45em;
+  height: 0.45em;
+}
+
 .skill-tag--sm {
-  padding: 0.4em 0.8em;
+  padding: 0.5em 0.9em;
   font-size: var(--text-xs);
-  font-weight: var(--font-weight-normal);
-  opacity: 0.9;
+  font-weight: var(--font-weight-medium);
+  opacity: 0.95;
+}
+
+.skill-tag--sm .competency-dot {
+  width: 0.35em;
+  height: 0.35em;
 }
