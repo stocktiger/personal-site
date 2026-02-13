@@ -7,7 +7,7 @@ import courses from '@/data/resume/courses';
 export const metadata: Metadata = {
   title: 'Library',
   description:
-    'Course library: Selected courses taken by Michael Suarez at Stanford University and the University at Buffalo.',
+    'Lectures, Articles, Repositories Michael Suarez finds valuable.',
 };
 
 export default function LibraryPage() {
@@ -17,7 +17,8 @@ export default function LibraryPage() {
         <header className="library-header">
           <h1 className="library-title">Library</h1>
           <p className="library-subtitle">
-            Selected coursework from Stanford and Buffalo
+            Lectures, Articles, Repositories I have found valuable in my
+            learning journey.{' '}
           </p>
         </header>
         <div className="library-content">

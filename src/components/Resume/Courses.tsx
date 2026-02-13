@@ -10,10 +10,10 @@ function getRows(courses: CourseType[]) {
   return courses
     .sort((a, b) => {
       let ret = 0;
-      if (a.university > b.university) ret = -1;
-      else if (a.university < b.university) ret = 1;
-      else if (a.number > b.number) ret = 1;
-      else if (a.number < b.number) ret = -1;
+      if (a.affiliation > b.affiliation) ret = -1;
+      else if (a.affiliation < b.affiliation) ret = 1;
+      else if (a.author > b.author) ret = 1;
+      else if (a.author < b.author) ret = -1;
       return ret;
     })
     .map((course) => <Course data={course} key={course.title} />);

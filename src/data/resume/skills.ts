@@ -1,4 +1,4 @@
-import { title } from "node:process";
+import { title } from 'node:process';
 
 export interface Skill {
   title: string;

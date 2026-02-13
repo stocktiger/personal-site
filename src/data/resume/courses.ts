@@ -1,88 +1,59 @@
+export type Category =
+  | 'Academic Lecture'
+  | 'Company Keynote'
+  | 'Discussion Panel'
+  | 'Opinion Piece'
+  | 'Scientific Article'
+  | 'Code Repository'
+  | 'Corporate Article';
+
+export type Topic =
+  | 'AI'
+  | 'Finance'
+  | 'Drug Discovery'
+  | 'FinTech'
+  | 'Policy'
+  | 'Politics'
+  | 'Society'
+  | 'Philosophy';
+
 export interface Course {
   title: string;
-  number: string;
+  author: string;
   link: string;
-  university: string;
+  affiliation: string;
+  year: number;
+  category: Category;
+  topics: Topic[];
 }
 
 const courses: Course[] = [
   {
-    title: 'Convex Optimization',
-    number: 'EE 364a',
-    link: 'http://stanford.edu/class/ee364a/',
-    university: 'Stanford',
+    title: 'Deep Learning',
+    author: 'Andrew Ng',
+    link: 'https://cs230.stanford.edu/syllabus/',
+    affiliation: 'Stanford',
+    year: 2025,
+    category: 'Academic Lecture',
+    topics: ['AI'],
   },
   {
-    title: 'Machine Learning',
-    number: 'CS 229',
-    link: 'http://cs229.stanford.edu/',
-    university: 'Stanford',
+    title: 'Highly accurate protein structure prediction with AlphaFold',
+    author: 'Demis Hassabis, et al.',
+    link: 'https://www.nature.com/articles/s41586-021-03819-2',
+    affiliation: 'DeepMind',
+    year: 2021,
+    category: 'Scientific Article',
+    topics: ['AI', 'Drug Discovery'],
   },
   {
-    title: 'Convolutional Neural Networks for Visual Recognition',
-    number: 'CS 231n',
-    link: 'http://cs231n.stanford.edu/',
-    university: 'Stanford',
-  },
-  {
-    title: 'Numerical Linear Algebra',
-    number: 'CME 302',
-    link: 'http://scpd.stanford.edu/search/publicCourseSearchDetails.do;jsessionid=561188A06434D7D97953C4706DE12831?method=load&courseId=11685',
-    university: 'Stanford',
-  },
-  {
-    title: 'Numerical Optimization',
-    number: 'CME 304',
-    link: 'http://web.stanford.edu/class/cme304/',
-    university: 'Stanford',
-  },
-  {
-    title: 'Discrete Mathematics and Algorithms',
-    number: 'CME 305',
-    link: 'http://stanford.edu/~rezab/discrete/',
-    university: 'Stanford',
-  },
-  {
-    title: 'Stochastic Methods in Engineering',
-    number: 'CME 306',
-    link: 'http://web.stanford.edu/class/cme306/',
-    university: 'Stanford',
-  },
-  {
-    title: 'Optimization',
-    number: 'CME 307',
-    link: 'http://stanford.edu/class/cme307/',
-    university: 'Stanford',
-  },
-  {
-    title: 'Stochastic Processes',
-    number: 'CME 308',
-    link: 'http://web.stanford.edu/class/cme308/',
-    university: 'Stanford',
-  },
-  {
-    title: 'Randomized Algorithms and Probabilistic Analysis',
-    number: 'CS 365',
-    link: 'http://web.stanford.edu/class/cs365/',
-    university: 'Stanford',
-  },
-  {
-    title: 'Deep Learning for Natural Language Processing',
-    number: 'CS 224d',
-    link: 'http://cs224d.stanford.edu',
-    university: 'Stanford',
-  },
-  {
-    title: 'Mining Massive Data Sets',
-    number: 'CS 246',
-    link: 'http://web.stanford.edu/class/cs246/',
-    university: 'Stanford',
-  },
-  {
-    title: 'Computer Vision: Foundations and Applications',
-    number: 'CS 131',
-    link: 'http://vision.stanford.edu/teaching/cs131_fall1415/index.html',
-    university: 'Stanford',
+    title: 'OpenClaw — Personal AI Assistant',
+    author: 'Peter Steinberger, et al.',
+    link: 'https://github.com/openclaw/openclaw',
+    affiliation: 'Open Source',
+    year: 2026,
+    category: 'Code Repository',
+    topics: ['AI', 'Society'],
   },
 ];
 

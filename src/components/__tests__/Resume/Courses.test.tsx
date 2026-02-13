@@ -7,21 +7,30 @@ import Course from '../../Resume/Courses/Course';
 const mockCourses = [
   {
     title: 'Machine Learning',
-    number: 'CS 229',
+    author: 'Andrew Ng',
     link: 'http://cs229.stanford.edu/',
-    university: 'Stanford',
+    affiliation: 'Stanford',
+    year: 2023,
+    category: 'Academic Lecture' as const,
+    topics: ['AI' as const],
   },
   {
     title: 'Deep Learning',
-    number: 'CS 230',
+    author: 'Ian Goodfellow',
     link: 'http://cs230.stanford.edu/',
-    university: 'Stanford',
+    affiliation: 'Stanford',
+    year: 2022,
+    category: 'Academic Lecture' as const,
+    topics: ['AI' as const],
   },
   {
     title: 'Algorithms',
-    number: 'CS 161',
+    author: 'Tim Roughgarden',
     link: 'http://cs161.stanford.edu/',
-    university: 'MIT',
+    affiliation: 'MIT',
+    year: 2021,
+    category: 'Academic Lecture' as const,
+    topics: ['AI' as const],
   },
 ];
 
@@ -42,12 +51,12 @@ describe('Courses', () => {
     expect(screen.getByText('Algorithms')).toBeInTheDocument();
   });
 
-  it('renders course numbers', () => {
+  it('renders course authors', () => {
     render(<Courses data={mockCourses} />);
 
-    expect(screen.getByText(/CS 229/)).toBeInTheDocument();
-    expect(screen.getByText(/CS 230/)).toBeInTheDocument();
-    expect(screen.getByText(/CS 161/)).toBeInTheDocument();
+    expect(screen.getByText('Andrew Ng')).toBeInTheDocument();
+    expect(screen.getByText('Ian Goodfellow')).toBeInTheDocument();
+    expect(screen.getByText('Tim Roughgarden')).toBeInTheDocument();
   });
 
   it('renders courses as list items', () => {
@@ -60,12 +69,12 @@ describe('Courses', () => {
     expect(items.length).toBe(mockCourses.length);
   });
 
-  it('sorts courses by university then number', () => {
+  it('sorts courses by affiliation then author', () => {
     render(<Courses data={mockCourses} />);
 
     const items = screen.getAllByRole('listitem');
     // Stanford courses should come before MIT (reverse alpha)
-    // And within Stanford, sorted by number
+    // And within Stanford, sorted by author
     expect(items.length).toBe(3);
   });
 
@@ -80,15 +89,18 @@ describe('Courses', () => {
 describe('Course', () => {
   const mockCourse = {
     title: 'Machine Learning',
-    number: 'CS 229',
+    author: 'Andrew Ng',
     link: 'http://cs229.stanford.edu/',
-    university: 'Stanford',
+    affiliation: 'Stanford',
+    year: 2023,
+    category: 'Academic Lecture' as const,
+    topics: ['AI' as const],
   };
 
-  it('renders course number and title', () => {
+  it('renders course author and title', () => {
     render(<Course data={mockCourse} />);
 
-    expect(screen.getByText(/CS 229/)).toBeInTheDocument();
+    expect(screen.getByText('Andrew Ng')).toBeInTheDocument();
     expect(screen.getByText('Machine Learning')).toBeInTheDocument();
   });
 

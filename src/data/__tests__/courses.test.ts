@@ -11,20 +11,26 @@ describe('courses data', () => {
   it('each course has required properties', () => {
     for (const course of courses) {
       expect(course).toHaveProperty('title');
-      expect(course).toHaveProperty('number');
+      expect(course).toHaveProperty('author');
       expect(course).toHaveProperty('link');
-      expect(course).toHaveProperty('university');
+      expect(course).toHaveProperty('affiliation');
+      expect(course).toHaveProperty('year');
+      expect(course).toHaveProperty('category');
+      expect(course).toHaveProperty('topics');
 
       expect(typeof course.title).toBe('string');
-      expect(typeof course.number).toBe('string');
+      expect(typeof course.author).toBe('string');
       expect(typeof course.link).toBe('string');
-      expect(typeof course.university).toBe('string');
+      expect(typeof course.affiliation).toBe('string');
+      expect(typeof course.year).toBe('number');
+      expect(typeof course.category).toBe('string');
+      expect(Array.isArray(course.topics)).toBe(true);
     }
   });
 
-  it('course numbers are non-empty', () => {
+  it('course authors are non-empty', () => {
     for (const course of courses) {
-      expect(course.number.trim().length).toBeGreaterThan(0);
+      expect(course.author.trim().length).toBeGreaterThan(0);
     }
   });
 
@@ -49,16 +55,9 @@ describe('courses data', () => {
     expect(uniqueTitles.size).toBe(titles.length);
   });
 
-  it('has unique course numbers', () => {
-    const numbers = courses.map((c) => c.number);
-    const uniqueNumbers = new Set(numbers);
-
-    expect(uniqueNumbers.size).toBe(numbers.length);
-  });
-
-  it('all courses have valid university names', () => {
+  it('all courses have valid affiliation names', () => {
     for (const course of courses) {
-      expect(course.university.trim().length).toBeGreaterThan(0);
+      expect(course.affiliation.trim().length).toBeGreaterThan(0);
     }
   });
 });
