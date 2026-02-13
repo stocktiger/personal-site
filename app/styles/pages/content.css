@@ -331,6 +331,61 @@
 }
 
 /* ========================================
+   LIBRARY PAGE
+   ======================================== */
+
+.library-page {
+  max-width: 880px;
+  margin: 0 auto;
+}
+
+.library-header {
+  text-align: center;
+  margin-bottom: 3rem;
+}
+
+.library-title {
+  font-size: clamp(2rem, 5vw, 3rem);
+  font-weight: var(--font-weight-black);
+  letter-spacing: var(--tracking-tight);
+  margin-bottom: 0.5rem;
+  color: var(--color-fg-bold);
+}
+
+.library-subtitle {
+  font-size: var(--text-lg);
+  color: var(--color-fg-light);
+}
+
+.library-content {
+  display: flex;
+  flex-direction: column;
+}
+
+.library-content .courses {
+  padding-top: 0;
+}
+
+.library-content .courses .title {
+  display: none;
+}
+
+.library-content .course-list {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 1rem;
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+@media (max-width: 736px) {
+  .library-content .course-list {
+    grid-template-columns: 1fr;
+  }
+}
+
+/* ========================================
    STATS PAGE
    ======================================== */
 
