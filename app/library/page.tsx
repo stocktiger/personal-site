@@ -1,8 +1,7 @@
 import type { Metadata } from 'next';
 
-import Courses from '@/components/Resume/Courses';
+import LibraryContent from '@/components/Library/LibraryContent';
 import PageWrapper from '@/components/Template/PageWrapper';
-import courses from '@/data/resume/courses';
 
 export const metadata: Metadata = {
   title: 'Library',
@@ -21,9 +20,7 @@ export default function LibraryPage() {
             learning journey.{' '}
           </p>
         </header>
-        <div className="library-content">
-          <Courses data={courses} />
-        </div>
+        <LibraryContent />
       </section>
     </PageWrapper>
   );

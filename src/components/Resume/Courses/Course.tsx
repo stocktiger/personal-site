@@ -7,7 +7,7 @@ interface CourseProps {
 export default function Course({ data }: CourseProps) {
   return (
     <li className="course-container">
-      <a href={data.link}>
+      <a href={data.link} target="_blank" rel="noopener noreferrer">
         <h4 className="course-number">{data.author}</h4>
         <p className="course-meta">
           {data.year}, {data.affiliation}

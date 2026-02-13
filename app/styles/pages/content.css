@@ -355,6 +355,97 @@
 .library-subtitle {
   font-size: var(--text-lg);
   color: var(--color-fg-light);
+  margin-bottom: 2rem;
+}
+
+.library-filters {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+  margin-top: 2rem;
+  margin-bottom: 3rem;
+}
+
+.library-filters-section {
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+}
+
+.library-filters-label {
+  font-size: var(--text-sm);
+  font-weight: var(--font-weight-bold);
+  color: var(--color-fg);
+  text-transform: uppercase;
+  letter-spacing: var(--tracking-wide);
+}
+
+.library-filters-group {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.625rem;
+}
+
+.library-filter-button {
+  font-size: var(--text-sm);
+  font-weight: var(--font-weight-medium);
+  padding: 0.5rem 1rem;
+  border-radius: var(--radius-sm);
+  border: 1px solid var(--color-border);
+  background: var(--color-surface-subtle);
+  color: var(--color-fg-light);
+  cursor: pointer;
+  transition: all var(--duration-fast) var(--ease-out);
+}
+
+.library-filter-button:hover {
+  background: var(--color-surface-hover);
+  border-color: var(--color-border-fg);
+  transform: translateY(var(--lift-sm));
+}
+
+.library-filter-category.library-filter-active {
+  background: var(--color-accent-light);
+  border-color: var(--color-accent-border);
+  color: var(--color-accent);
+  font-weight: var(--font-weight-bold);
+}
+
+.library-filter-category.library-filter-active:hover {
+  background: color-mix(in srgb, var(--color-accent-light) 80%, var(--color-accent) 20%);
+  border-color: var(--color-accent);
+}
+
+.library-filter-topic.library-filter-active {
+  background: var(--color-accent-subtle);
+  border-color: var(--color-accent-border);
+  color: var(--color-accent);
+  font-weight: var(--font-weight-bold);
+}
+
+.library-filter-topic.library-filter-active:hover {
+  background: color-mix(in srgb, var(--color-accent-subtle) 80%, var(--color-accent) 20%);
+  border-color: var(--color-accent);
+}
+
+.library-filter-clear {
+  align-self: center;
+  font-size: var(--text-sm);
+  font-weight: var(--font-weight-medium);
+  padding: 0.625rem 1.25rem;
+  margin-top: 0.5rem;
+  border-radius: var(--radius-md);
+  border: 1px solid var(--color-border);
+  background: transparent;
+  color: var(--color-fg-light);
+  cursor: pointer;
+  transition: all var(--duration-fast) var(--ease-out);
+}
+
+.library-filter-clear:hover {
+  background: var(--color-surface-hover);
+  border-color: var(--color-border-fg);
+  color: var(--color-fg);
 }
 
 .library-content {

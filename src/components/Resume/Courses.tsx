@@ -8,14 +8,7 @@ interface CoursesProps {
 
 function getRows(courses: CourseType[]) {
   return courses
-    .sort((a, b) => {
-      let ret = 0;
-      if (a.affiliation > b.affiliation) ret = -1;
-      else if (a.affiliation < b.affiliation) ret = 1;
-      else if (a.author > b.author) ret = 1;
-      else if (a.author < b.author) ret = -1;
-      return ret;
-    })
+    .sort((a, b) => b.year - a.year)
     .map((course) => <Course data={course} key={course.title} />);
 }
 
