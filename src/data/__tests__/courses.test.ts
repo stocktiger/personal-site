@@ -14,6 +14,7 @@ describe('courses data', () => {
       expect(course).toHaveProperty('author');
       expect(course).toHaveProperty('link');
       expect(course).toHaveProperty('affiliation');
+      expect(course).toHaveProperty('month');
       expect(course).toHaveProperty('year');
       expect(course).toHaveProperty('category');
       expect(course).toHaveProperty('topics');
@@ -22,6 +23,7 @@ describe('courses data', () => {
       expect(typeof course.author).toBe('string');
       expect(typeof course.link).toBe('string');
       expect(typeof course.affiliation).toBe('string');
+      expect(typeof course.month).toBe('string');
       expect(typeof course.year).toBe('number');
       expect(typeof course.category).toBe('string');
       expect(Array.isArray(course.topics)).toBe(true);

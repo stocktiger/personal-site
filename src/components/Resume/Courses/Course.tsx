@@ -10,7 +10,7 @@ export default function Course({ data }: CourseProps) {
       <a href={data.link} target="_blank" rel="noopener noreferrer">
         <h4 className="course-number">{data.author}</h4>
         <p className="course-meta">
-          {data.year}, {data.affiliation}
+          {data.month}, {data.year} · {data.affiliation}
         </p>
         <p className="course-name">{data.title}</p>
         <div className="course-tags">
