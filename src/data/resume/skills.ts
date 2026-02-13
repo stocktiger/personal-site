@@ -91,6 +91,11 @@ const skills: Skill[] = [
     competency: 5,
     category: ['ML Engineering', 'Data Engineering'],
   },
+  {
+    title: 'Grafana',
+    competency: 5,
+    category: ['Data Engineering'],
+  },
   // Web Development
   {
     title: 'Node.js',
@@ -106,6 +111,11 @@ const skills: Skill[] = [
   {
     title: 'PostgreSQL',
     competency: 4,
+    category: ['Databases'],
+  },
+  {
+    title: 'DolphinDB',
+    competency: 5,
     category: ['Databases'],
   },
   {
