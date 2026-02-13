@@ -27,10 +27,6 @@ const routes: Route[] = [
     path: '/library',
   },
   {
-    label: 'Stats',
-    path: '/stats',
-  },
-  {
     label: 'Contact',
     path: '/contact',
   },

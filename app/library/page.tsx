@@ -16,7 +16,7 @@ export default function LibraryPage() {
         <header className="library-header">
           <h1 className="library-title">Library</h1>
           <p className="library-subtitle">
-            Lectures, Articles, Repositories I have found valuable in my
+            Lectures, Articles & Repositories I have found valuable in my
             learning journey.{' '}
           </p>
         </header>

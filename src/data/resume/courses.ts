@@ -2,6 +2,7 @@ export type Category =
   | 'Academic Lecture'
   | 'Company Keynote'
   | 'Discussion Panel'
+  | 'Interview'
   | 'Opinion Piece'
   | 'Scientific Article'
   | 'Code Repository'
@@ -55,6 +56,25 @@ const courses: Course[] = [
     category: 'Code Repository',
     topics: ['AI', 'Society'],
   },
+  {
+    title: 'Messari - Crypto Thesis 2026',
+    author: 'Messari Research Team',
+    link: 'https://messari.io/report-pdf/9225a0d0358e412d8aa9bd0d109c4f1bc3019939.pdf',
+    affiliation: 'Messari',
+    year: 2025,
+    category: 'Opinion Piece',
+    topics: ['FinTech', 'Policy'],
+  },
+  {
+    title: 'Moving from the age of scaling to the age of research',
+    author: 'Ilya Sutskever',
+    link: 'https://www.youtube.com/watch?v=aR20FWCCjAs',
+    affiliation: 'Safe Superintelligence',
+    year: 2025,
+    category: 'Interview',
+    topics: ['AI', 'Philosophy'],
+  },
+
 ];
 
 export default courses;
