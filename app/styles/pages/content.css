@@ -184,7 +184,16 @@
 }
 
 .contact-header .page-title {
-  margin-bottom: 0;
+  margin-bottom: 0.75rem;
+}
+
+.contact-subtitle {
+  font-size: var(--text-md);
+  color: var(--color-fg-light);
+  text-align: center;
+  line-height: 1.6;
+  max-width: 480px;
+  margin: 0 auto;
 }
 
 .contact-content {

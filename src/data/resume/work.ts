@@ -18,7 +18,7 @@ const work: Position[] = [
     url: 'https://neoviumbridge.com',
     startDate: '2025-10-01',
     summary: `AI company in Amsterdam.`,
-    highlights: ['Consulting', 'Educating', 'Bootstrapping'],
+    highlights: ['Consulting', 'Educating', 'Bootstrapping', 'Innovating'],
   },
   {
     name: 'Bastion Trading',
@@ -58,10 +58,10 @@ const work: Position[] = [
     endDate: '2022-05-01',
     summary: `AI Data Cleaning Solution of Healthcare Data.`,
     highlights: [
-      'Innovating',
       'Fundraising',
       'Pitching',
       'Building',
+      'Disrupting',
       'Selling',
     ],
   },
