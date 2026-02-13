@@ -9,6 +9,9 @@ export default function Course({ data }: CourseProps) {
     <li className="course-container">
       <a href={data.link}>
         <h4 className="course-number">{data.author}</h4>
+        <p className="course-meta">
+          {data.year}, {data.affiliation}
+        </p>
         <p className="course-name">{data.title}</p>
         <div className="course-tags">
           <span className="course-tag course-tag-category">

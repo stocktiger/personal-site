@@ -418,7 +418,15 @@
   font-size: var(--text-sm);
   font-weight: var(--font-weight-bold);
   color: var(--color-accent);
-  margin-bottom: 0.25rem;
+  margin-bottom: 0.125rem;
+}
+
+.courses .course-meta {
+  display: block;
+  font-size: var(--text-xs);
+  font-style: italic;
+  color: var(--color-fg-light);
+  margin-bottom: 0.5rem;
 }
 
 .courses .course-name {
