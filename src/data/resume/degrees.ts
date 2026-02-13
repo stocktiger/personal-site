@@ -26,12 +26,10 @@ const degrees: Degree[] = [
   {
     school: 'Danube International School',
     degree: 'International Baccalaureate Bilingual Diploma',
-    thesis:
-      'Award: International Chemistry Olympiad Bronze Medal 2014',
+    thesis: 'Award: International Chemistry Olympiad Bronze Medal 2014',
     link: 'https://www.danubeschool.com',
     year: 2014,
   },
-
 ];
 
 export default degrees;

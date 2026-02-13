@@ -18,11 +18,7 @@ const work: Position[] = [
     url: 'https://neoviumbridge.com',
     startDate: '2025-10-01',
     summary: `AI company in Amsterdam.`,
-    highlights: [
-      'Consulting.',
-      'Education.',
-      'Bootstrapped.',
-    ],
+    highlights: ['Consulting', 'Educating', 'Bootstrapping'],
   },
   {
     name: 'Bastion Trading',
@@ -30,14 +26,14 @@ const work: Position[] = [
     url: 'https://bastiontrading.com',
     startDate: '2021-05-01',
     endDate: '2025-10-01',
-    summary: `Multi Asset Derivatives Proprietary Trading Firm in Hong Kong.`,
+    summary: `Multi Strategy Multi Asset Derivatives Proprietary Trading Firm in Hong Kong.`,
     highlights: [
-      'Research.',
-      'Logic.',
-      'Infrastructure.',
-      'Trading.',
-      'Risk.',
-      'Modeling.',
+      'Researching',
+      'Modeling',
+      'Testing',
+      'Trading',
+      'Risking',
+      'Winning',
     ],
   },
   {
@@ -47,9 +43,11 @@ const work: Position[] = [
     startDate: '2023-02-01',
     summary: `Digital Transformation in Finance - Core Course for MSc in Business Consulting & Digital Transformation`,
     highlights: [
-      'Teaching.',
-      'Mentoring',
       'Learning',
+      'Teaching',
+      'Communicating',
+      'Mentoring',
+      'Inspiring',
     ],
   },
   {
@@ -60,11 +58,11 @@ const work: Position[] = [
     endDate: '2022-05-01',
     summary: `AI Data Cleaning Solution of Healthcare Data.`,
     highlights: [
-      'Fundraising.',
-      'Innovating.',
-      'Pitching.',
-      'Building.',
-      'Selling.',
+      'Innovating',
+      'Fundraising',
+      'Pitching',
+      'Building',
+      'Selling',
     ],
   },
   {
@@ -73,14 +71,13 @@ const work: Position[] = [
     url: 'https://huang.chem.wisc.edu/xuhui-huang/',
     startDate: '2018-07-01',
     endDate: '2021-05-01',
-    summary:
-      'Building a multi-disciplinary team of computational chemists and machine learning engineers to solve problems in drug discovery.',
+    summary: `Building a multi-disciplinary team of computational chemists and machine learning engineers to solve problems in drug discovery.`,
     highlights: [
-      'Building.',
-      'Leading.',
-      'Researching.',
-      'Innovating.',
-      'Presenting.'
+      'Researching',
+      'Innovating',
+      'Building',
+      'Leading',
+      'Presenting',
     ],
   },
 ];

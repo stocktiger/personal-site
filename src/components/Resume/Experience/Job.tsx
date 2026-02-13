@@ -51,11 +51,13 @@ export default function Job({ data }: JobProps) {
         </Markdown>
       ) : null}
       {highlights ? (
-        <ul className="points">
+        <div className="job-skills">
           {highlights.map((highlight) => (
-            <li key={highlight}>{highlight}</li>
+            <span key={highlight} className="job-skill-tag">
+              {highlight}
+            </span>
           ))}
-        </ul>
+        </div>
       ) : null}
     </article>
   );
